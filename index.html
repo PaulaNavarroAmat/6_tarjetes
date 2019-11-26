@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tarjetes_flexbox</title>
+    <style type="text/css">
+        *{
+            margin:0;
+            padding: 0;
+/*            box-sizing:bordex-box; (la caja no la hace mas grande)*/
+        }
+        
+        
+        html{
+            min-height: 100%;
+             }
+            img{
+                width: 100%;
+          
+        }
+        body{
+            font-family: "Georgia" cursive;
+            font-size: 18px;
+            background: linear-gradient(38deg,pink,coral);
+            color: crimson;
+        }
+        .container{
+            display: flex;
+            flex-direction: row;
+            padding:2em 4em;
+            justify-content: center;
+            
+        }
+        .disenyador{
+            display: flex;
+            flex-direction: column;
+            width: 25em;
+            margin: 1em;
+            background: rgba(240,240,240,0.9);
+            border-radius: 20px;
+            box-shadow: 0 0 20px brown;
+        }
+        .disenyador_img{
+            border-radius: 20px 20px 0 0;
+            overflow: hidden;
+            width: 100%;
+            height: 400px;
+            background: pink;
+        }
+        .disenyador_img img{
+           
+            height: 100%;
+            object-fit: cover;
+            filter: grayscale(100%);
+            
+        }
+        .disenyador:last-child .disenyador_img img{
+            object-position:top;
+            
+           
+            
+        }
+        header{
+            display: flex;
+            margin: 0.5em 1em;
+            justify-content: space-between;
+            border-bottom: 1px solid pink;
+            align-items: baseline;
+        }
+        h3{
+            font-style: italic;
+            font-weight: bold;
+            
+        }
+        span{
+            font-style: normal;
+            font-weight: lighter;
+            font-size: 0.9em;
+        }
+        .disenyador_contenido{
+            display: flex;
+            flex-grow: 1;
+            text-align: justify;
+            hyphens: auto;
+            margin: 1em 1em 0.5em 1em;
+            font-size: 0.9em;
+            line-height: 1.4em;
+        }
+        footer{
+            background: orange;
+            color:aliceblue;
+            font-size: 0.9em;
+            font-style: italic;
+            border-radius: 0 0 20px 20px;
+            padding:0.6em;
+        }
+        @media (max-width:600px){
+            body{
+                font-size: 16px;
+            }
+            .container{
+                flex-direction: column;
+            }
+        }
+    
+    
+    </style>
+</head>
+<body>
+   <div class="container">
+       <div class="disenyador">
+           <div class="disenyador_img">
+               <img src="img/Kyle-Cooper-roger-cremers-772x1030.jpg" alt="Kyle Cooper">
+           </div>
+           <header>
+               <h3>Kyle Cooper</h3>
+               <span>1962</span>
+           </header>
+           <p class="disenyador_contenido">
+               Kyle Cooper is an American designer known for his work creating title sequences for motion pictures. He has produced and directed over 350 visual effects sequences and main title sequences across a broad array of film and various broadcast mediums.   
+
+Cooper was born on a Friday the 13th in Salem, Massachusetts. As a child, Cooper spent his days obsessed with sketching monsters. He was also fascinated by comic books, monster makeup books, and horror movies. Cooper stated in an interview with Revert to Saved that he had always wanted to be a film director, “I’ve always been interested in film and editing—more specifically, the juxtaposition of images in film or on a single page. However, I felt it more comprehensive to tell stories over time. Print design can provide great single moments, but I wanted to work with a sequence that had a beginning, middle and end"
+           </p>
+           <footer class="disenyador_pie">
+                In 2003, Cooper left imaginary forces and founded Prologue, a creative agency in which he works in a small team while concentrating on creating title sequences.
+           </footer>
+       </div>
+       <div class="disenyador">
+       <div class="disenyador_img">
+       <img src="img/stefan-sagmeister-justin-hackworth.jpg">
+   </div>
+   <header>
+       <h3>Stefan Sagmeister</h3>
+       <span>1962</span>
+   </header>
+    <p class="disenyador_contenido">Is a New York-based graphic designer, storyteller, and typographer. Sagmeister co-founded a design firm called Sagmeister Walsh Inc. with Jessica Walsh in New York City. He has designed album covers for Lou Reed, OK Go, The Rolling Stones, David Byrne, Jay Z, Aerosmith and Pat Metheny.
+    Sagmeister studied graphic design at the University of Applied Arts Vienna. He later received a Fulbright scholarship to study at the Pratt Institute in New York. He began his design career at the age of 15 at "Alphorn", an Austrian Youth magazine, which is named after the traditional Alpine musical instrument.
+
+In 1991, he moved to Hong Kong to work with Leo Burnett's Hong Kong Design Group. In 1993, he returned to New York to work with Tibor Kalman's M design company. His tenure there was short lived, as Kalman soon decided to retire from the design business to edit Colors magazine for the Benetton Group in Treviso, Italy.
+    </p>
+    <footer class="disenyador_pie">
+        He has spent many years designing for the music industry. Several years ago he decided to dedicate 25% of his work to the art world, things like books and publications for galleries, another 25% to the scientific community, 25% to social causes, and the remaining quarter has stayed dedicated to the music industry.
+    </footer>
+    </div>
+    </div>
+</body>
+</html>
